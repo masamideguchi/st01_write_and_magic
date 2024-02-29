@@ -45,18 +45,19 @@ def ex4():
     st.write(c)
 
 
-
-
-
 st.write('引数が文字列の場合は、Markdown形式のテキストを出力')
 ex1()
+show_code(ex1)
 st.divider()
 st.write('数値、データフレームなども出力可能')
 ex2()
+show_code(ex2)
 st.divider()
 st.write('文字列とデータフレームなどの複数の引数を渡すことも可能')
 ex3()
+show_code(ex3)
 st.divider()
 st.write('XXXX')
 ex4()
+show_code(ex4)
 
