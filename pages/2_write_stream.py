@@ -29,7 +29,7 @@ def ex1():
             yield word + " "
             time.sleep(0.05)
 
-
+    st.write("streamlit 1.31.0以上")
     if st.button("Stream data"):
         st.write_stream(stream_data)
 
