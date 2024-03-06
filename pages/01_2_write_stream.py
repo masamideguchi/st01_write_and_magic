@@ -8,6 +8,14 @@ def ex1():
     import streamlit as st
 
     _LOREM_IPSUM = """
+    ジェネレーター、 反復可能 または ストリーム のような
+    シーケンスを アプリに ストリーミング します。
+
+    st.write_stream は、 指定された シーケンスを 反復処理し、
+    すべての チャンクを アプリに 書き込みます。
+    文字列 チャンクは タイプライター効果を 使用して 書き込まれます。
+    他の データ型は st.write を使用して 書き込まれます。
+
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -17,7 +25,7 @@ def ex1():
     def stream_data():
         for word in _LOREM_IPSUM.split():
             yield word + " "
-            time.sleep(0.05)
+            time.sleep(1)
 
         yield pd.DataFrame(
             np.random.randn(5, 10),
@@ -27,7 +35,7 @@ def ex1():
 
         for word in _LOREM_IPSUM.split():
             yield word + " "
-            time.sleep(0.05)
+            time.sleep(1)
 
     st.write("streamlit 1.31.0以上")
     if st.button("Stream data"):
