@@ -24,6 +24,8 @@ Two (or more) newline characters in a row will result in a hard return.
 
     st.markdown(multi)
 
+    st.markdown('$$\int a x^2 \,dx$$')
+
 ex1()
 st.divider()
 show_code(ex1)
